@@ -26,8 +26,8 @@ class Todo{
     }
     addItem(text){
         const item={
-            text,
             id:generateId(this.todoList),
+            text,
             date: new Date()
         }
         this.todoList.push(item);

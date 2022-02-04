@@ -13,7 +13,8 @@ module.exports.saveFile=(data,fileName)=>{
 
 module.exports.readFile=(fileName)=>{
     try{
-        fs.readFileSync(fileName,'utf-8')
+        const data= fs.readFileSync(fileName,'utf-8')
+        return JSON.parse(data);
     }
     catch(e){
         console.log(e.message);
